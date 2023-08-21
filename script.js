@@ -54,6 +54,7 @@ function create() {
     startButton = game.add.button(game.world.width*0.5, game.world.height*0.5, 'button', startGame, this, 1, 0, 2);
     startButton.anchor.set(0.5);
 }
+
 function update() {
     game.physics.arcade.collide(ball, paddle, ballHitPaddle);
     game.physics.arcade.collide(ball, bricks, ballHitBrick);
@@ -61,6 +62,7 @@ function update() {
         paddle.x = game.input.x || game.world.width*0.5;
     }
 }
+
 function initBricks() {
     brickInfo = {
         width: 50,
